@@ -6,14 +6,14 @@
 
 <body>
 <div th:replace="fragments/header :: header"></div>
-<form action="/report" th:action="@{/report}" th:object="${model}" method="post">
+<form action="/report" th:action="@{/report}" th:object="${reportModel}" method="post">
     <table>
         <tr>
             <td>period:</td>
-            <td><input type="text" th:field="${createReport.reportInterval}" /></td>
+            <td><input type="text" th:field="*{createReport.reportInterval}" /></td>
             <!--td th:if="${#fields.hasErrors('createReport.reportInterval')}" th:errors="${createReport.reportInterval}">report interval error message</td-->
             <td>publisher</td>
-            <td><input type="text" th:field="${publisher}" /></td>
+            <td><input type="text" th:field="*{publisher}" /></td>
             <!--td th:if="${#fields.hasErrors('publisher')}" th:errors="${publisher}">publisher error message</td-->
         </tr>
         <tr>
