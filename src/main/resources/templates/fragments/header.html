@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div th:fragment="header">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Appnexus Report</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPublisher" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        publisher
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/report/avisa nordland">www.an.no</a>
+                        <a class="dropdown-item" href="/report/siste.no">www.siste.no</a>
+                        <a class="dropdown-item" href="/report/nordlys">www.nordlys.no</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/home" id="navbarDropdownPeriod" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        homeboy
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="fragments/head :: head"></div>
+
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<table>
+    <thead>
+    <tr>
+        <th>TimeStamp</th>
+        <th>creative id</th>
+        <th>creative</th>
+        <th>publisher</th>
+        <th>impessions measured viewable (IAB)</th>
+        <th>total impression</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${report.empty}">
+        <td colspan="7"> No Reports Availiable </td>
+    </tr>
+    <tr th:each="entry : ${report}">
+        <td><span th:text="${entry.hour}"> hours </span></td>
+        <td><span th:text="${entry.creativeId}">creative id</span></td>
+        <td><span th:text="${entry.creativeName}"> creative </span></td>
+        <td><span th:utext="${entry.publisherName}"> publisher </span></td>
+        <td><span th:text="${entry.impsViewed}"> inscreen </span></td>
+        <td><span th:text="${entry.viewMeasuredImps}"> impressions </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
